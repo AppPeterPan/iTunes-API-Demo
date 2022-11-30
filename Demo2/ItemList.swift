@@ -28,5 +28,6 @@ struct ItemList: View {
 struct ItemList_Previews: PreviewProvider {
     static var previews: some View {
         ItemList()
+            .environmentObject(ItunesDataFetcher())
     }
 }
