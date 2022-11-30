@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Demo2App: App {
+    @StateObject var fetcher = ItunesDataFetcher()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ItemList()
+                .environmentObject(fetcher)
         }
     }
 }
